@@ -39,6 +39,9 @@
     <ClInclude Include="snappy-stubs-public.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="snappy-test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -57,6 +60,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="snappy-stubs-internal.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="snappy_unittest.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="snappy-test.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

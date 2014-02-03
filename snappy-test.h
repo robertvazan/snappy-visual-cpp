@@ -132,7 +132,7 @@ namespace File {
 }  // namespace File
 
 namespace file {
-  int Defaults() { }
+  int Defaults() { return 0; }
 
   class DummyStatus {
    public:
@@ -328,7 +328,9 @@ class Benchmark {
           (new Benchmark(#benchmark_name, benchmark_name))
 
 extern Benchmark* Benchmark_BM_UFlat;
+#ifndef WIN32
 extern Benchmark* Benchmark_BM_UIOVec;
+#endif
 extern Benchmark* Benchmark_BM_UValidate;
 extern Benchmark* Benchmark_BM_ZFlat;
 
@@ -479,7 +481,9 @@ static void RunSpecifiedBenchmarks() {
   fprintf(stderr, "---------------------------------------------------\n");
 
   snappy::Benchmark_BM_UFlat->Run();
+#ifndef WIN32
   snappy::Benchmark_BM_UIOVec->Run();
+#endif
   snappy::Benchmark_BM_UValidate->Run();
   snappy::Benchmark_BM_ZFlat->Run();
 

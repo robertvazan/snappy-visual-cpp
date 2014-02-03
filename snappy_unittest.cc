@@ -26,6 +26,8 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+#include "stdafx.h"
+
 #include <math.h>
 #include <stdlib.h>
 
@@ -491,7 +493,7 @@ static int VerifyString(const string& input) {
   return uncompressed.size();
 }
 
-
+#ifndef WIN32
 static void VerifyIOVec(const string& input) {
   string compressed;
   DataEndingAtUnreadablePage i(input);
@@ -531,6 +533,7 @@ static void VerifyIOVec(const string& input) {
   delete[] iov;
   delete[] buf;
 }
+#endif
 
 // Test that data compressed by a compressor that does not
 // obey block sizes is uncompressed properly.
@@ -582,11 +585,15 @@ static int Verify(const string& input) {
 
 
   VerifyNonBlockedCompression(input);
+#ifndef WIN32
   VerifyIOVec(input);
+#endif
   if (!input.empty()) {
     const string expanded = Expand(input);
     VerifyNonBlockedCompression(expanded);
-    VerifyIOVec(input);
+#ifndef WIN32
+	VerifyIOVec(input);
+#endif
   }
 
 
@@ -817,6 +824,7 @@ TEST(Snappy, FourByteOffset) {
   CHECK_EQ(uncompressed, src);
 }
 
+#ifndef WIN32
 TEST(Snappy, IOVecEdgeCases) {
   // Test some tricky edge cases in the iovec output that are not necessarily
   // exercised by random tests.
@@ -928,7 +936,7 @@ TEST(Snappy, IOVecCopyOverflow) {
     delete[] reinterpret_cast<char *>(iov[i].iov_base);
   }
 }
-
+#endif
 
 static bool CheckUncompressedLength(const string& compressed,
                                     size_t* ulength) {
@@ -1261,6 +1269,7 @@ static void BM_UValidate(int iters, int arg) {
 }
 BENCHMARK(BM_UValidate)->DenseRange(0, 4);
 
+#ifndef WIN32
 static void BM_UIOVec(int iters, int arg) {
   StopBenchmarkTiming();
 
@@ -1306,7 +1315,7 @@ static void BM_UIOVec(int iters, int arg) {
   delete[] dst;
 }
 BENCHMARK(BM_UIOVec)->DenseRange(0, 4);
-
+#endif
 
 static void BM_ZFlat(int iters, int arg) {
   StopBenchmarkTiming();
@@ -1342,7 +1351,7 @@ BENCHMARK(BM_ZFlat)->DenseRange(0, ARRAYSIZE(files) - 1);
 }  // namespace snappy
 
 
-int main(int argc, char** argv) {
+int snappy_unittests(int argc, char** argv) {
   InitGoogle(argv[0], &argc, &argv, true);
   File::Init();
   RunSpecifiedBenchmarks();
