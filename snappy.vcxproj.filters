@@ -21,12 +21,39 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="snappy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="snappy-c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="snappy-internal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="snappy-sinksource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="snappy-stubs-internal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="snappy.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="snappy-c.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="snappy-sinksource.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="snappy-stubs-internal.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

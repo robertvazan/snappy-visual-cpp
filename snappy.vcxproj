@@ -76,6 +76,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="snappy-c.h" />
+    <ClInclude Include="snappy-internal.h" />
+    <ClInclude Include="snappy-sinksource.h" />
+    <ClInclude Include="snappy-stubs-internal.h" />
+    <ClInclude Include="snappy.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -88,6 +93,10 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="snappy-c.cc" />
+    <ClCompile Include="snappy-sinksource.cc" />
+    <ClCompile Include="snappy-stubs-internal.cc" />
+    <ClCompile Include="snappy.cc" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
