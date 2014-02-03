@@ -18,6 +18,8 @@
 // Windows Header Files:
 #include <windows.h>
 
+#define SNAPPY_DLL_EXPORT __declspec(dllexport)
+
 #include "snappy.h"
 #include "snappy-c.h"
 #include "snappy-internal.h"
