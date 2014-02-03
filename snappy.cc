@@ -944,6 +944,8 @@ size_t Compress(Source* reader, Sink* writer) {
   return written;
 }
 
+#ifndef WIN32
+
 // -----------------------------------------------------------------------
 // IOVec interfaces
 // -----------------------------------------------------------------------
@@ -1120,6 +1122,8 @@ bool RawUncompressToIOVec(Source* compressed, const struct iovec* iov,
   SnappyIOVecWriter output(iov, iov_cnt);
   return InternalUncompress(compressed, &output);
 }
+
+#endif
 
 // -----------------------------------------------------------------------
 // Flat array interfaces
