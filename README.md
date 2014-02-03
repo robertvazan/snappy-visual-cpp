@@ -1,2 +1,1 @@
-This is an exact copy of the original sources from [snappy SVN repository](http://code.google.com/p/snappy/).
-It makes it easier to track and merge changes into custom branches in Mercurial & Git world.
+This is a modification of [snappy compressor](http://code.google.com/p/snappy/) that builds cleanly in Visual C++.
