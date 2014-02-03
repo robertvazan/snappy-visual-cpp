@@ -36,6 +36,9 @@
     <ClInclude Include="snappy-stubs-internal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="snappy-stubs-public.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

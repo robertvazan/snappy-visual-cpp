@@ -78,6 +78,7 @@
   <ItemGroup>
     <ClInclude Include="snappy-c.h" />
     <ClInclude Include="snappy-internal.h" />
+    <ClInclude Include="snappy-stubs-public.h" />
     <ClInclude Include="snappy-sinksource.h" />
     <ClInclude Include="snappy-stubs-internal.h" />
     <ClInclude Include="snappy.h" />
