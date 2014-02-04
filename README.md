@@ -10,7 +10,7 @@ It produces nice clean DLLs with both 32-bit and 64-bit versions available.
 The DLLs have no dependencies since they are linked statically to C++ runtime.
 You can download the DLLs, LIB, and header files here:
 
-[snappy-dlls-1.1.1.zip](https://bitbucket.org/robertvazan/snappy-visual-cpp/downloads/snappy-dlls-1.1.1.zip)
+[snappy-dlls-1.1.1-rev1.zip](https://bitbucket.org/robertvazan/snappy-visual-cpp/downloads/snappy-dlls-1.1.1-rev1.zip)
 
 Tests have been ported as well and they show that this Windows port is correct and fast.
 Results below have been measured on Core i7 3.4GHz. The BM_ZFlat results are important.
