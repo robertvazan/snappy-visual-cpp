@@ -474,8 +474,10 @@ static void RunSpecifiedBenchmarks() {
 #ifndef NDEBUG
   fprintf(stderr, "WARNING: Compiled with assertions enabled, will be slow.\n");
 #endif
+#ifndef WIN32
 #ifndef __OPTIMIZE__
   fprintf(stderr, "WARNING: Compiled without optimization, will be slow.\n");
+#endif
 #endif
   fprintf(stderr, "Benchmark            Time(ns)    CPU(ns) Iterations\n");
   fprintf(stderr, "---------------------------------------------------\n");
