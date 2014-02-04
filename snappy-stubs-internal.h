@@ -344,6 +344,34 @@ inline int Bits::FindLSBSetNonZero64(uint64 n) {
   return __builtin_ctzll(n);
 }
 
+#elif defined(WIN32)
+
+inline int Bits::Log2Floor(uint32 n) {
+	unsigned long r = 0;
+	return _BitScanReverse(&r, n) ? r : -1;
+}
+
+inline int Bits::FindLSBSetNonZero(uint32 n) {
+	unsigned long r = 0;
+	return _BitScanForward(&r, n) ? r : 32;
+}
+
+#ifdef _M_X64
+
+inline int Bits::FindLSBSetNonZero64(uint64 n) {
+	unsigned long r = 0;
+	return _BitScanForward64(&r, n) ? r : 64;
+}
+
+#else
+
+inline int Bits::FindLSBSetNonZero64(uint64 n) {
+	unsigned long r1 = 0, r2 = 0;
+	return _BitScanForward(&r1, (uint32)n) ? r1 : _BitScanForward(&r2, (uint32)(n >> 32)) ? 32 + r2 : 64;
+}
+
+#endif
+
 #else  // Portable versions.
 
 inline int Bits::Log2Floor(uint32 n) {
