@@ -1350,7 +1350,7 @@ BENCHMARK(BM_ZFlat)->DenseRange(0, ARRAYSIZE(files) - 1);
 
 }  // namespace snappy
 
-extern "C" SNAPPY_DLL_EXPORT int snappy_unittests(int argc, char** argv) {
+extern "C" SNAPPY_EXPORTS int snappy_unittests(int argc, char** argv) {
   InitGoogle(argv[0], &argc, &argv, true);
   File::Init();
   RunSpecifiedBenchmarks();
