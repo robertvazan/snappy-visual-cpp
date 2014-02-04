@@ -5,9 +5,15 @@ Quoting from [upstream Snappy](http://code.google.com/p/snappy/) homepage:
 > Snappy is an order of magnitude faster for most inputs, but the resulting compressed files are anywhere from 20% to 100% bigger.
 > On a single core of a Core i7 processor in 64-bit mode, Snappy compresses at about 250 MB/sec or more and decompresses at about 500 MB/sec or more.
 
-This is a Windows fork of Snappy. It builds out of the box in Visual C++ 2013.
+This is a Windows port of Snappy. It builds out of the box in Visual C++ 2013.
 It produces nice clean DLLs with both 32-bit and 64-bit versions available.
-The DLLs have no dependencies since they are linked statically to C++ runtime.
+
+There is also an [older Windows port of Snappy](https://snappy4net.codeplex.com/) by author of LZ4.
+This port incorporates everything in the older port, but it uses newer version of Snappy,
+links statically to C++ runtime, exposes both C and C++ APIs through DLL symbol exports,
+provides more complete download, and generally better experience for C++ developers.
+.NET wrapper is provided through separate project [Snappy.NET](https://bitbucket.org/robertvazan/snappy.net).
+
 You can download the DLLs, LIB, and header files here:
 
 [snappy-dlls-1.1.1-rev3.zip](https://bitbucket.org/robertvazan/snappy-visual-cpp/downloads/snappy-dlls-1.1.1-rev3.zip)
