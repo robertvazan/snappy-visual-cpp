@@ -9,6 +9,7 @@
 #define SNAPPY_PATCHLEVEL 1
 #define SNAPPY_VERSION \
 	((SNAPPY_MAJOR << 16) | (SNAPPY_MINOR << 8) | SNAPPY_PATCHLEVEL)
+#define SNAPPY_VERSION_STRING "1.1.1"
 
 #include <string>
 

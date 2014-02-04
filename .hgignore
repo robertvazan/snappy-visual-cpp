@@ -5,3 +5,4 @@ ipch
 *.opensdf
 Debug
 Release
+*.aps
