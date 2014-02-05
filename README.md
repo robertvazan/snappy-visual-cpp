@@ -12,8 +12,18 @@ You can download the DLLs, LIB, and header files here:
 
 [snappy-dlls-1.1.1-rev3.zip](https://bitbucket.org/robertvazan/snappy-visual-cpp/downloads/snappy-dlls-1.1.1-rev3.zip)
 
+## Tests and benchmarks
+
 Tests have been ported as well and they show that this Windows port is correct and fast.
-Results below have been measured on Core i7 3.4GHz. The BM_ZFlat results are important.
+The various benchmark types should be interpreted as follows:
+
+* BM_ZFlat - compression speed and compression ratio (compressed size / uncompressed size)
+* BM_UFlat - decompression speed
+* BM_UValidate - validation of compressed stream
+
+Speed benchmarks should be taken with a grain of salt.
+The CPU used for testing was a very fast Core i7 3.4GHz with all data fitting in its L3 cache.
+Benchmarks have been done on a single core with all the other cores unoccupied.
 
 ## 32-bit test results
 
