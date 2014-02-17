@@ -31,6 +31,16 @@
 #ifndef UTIL_SNAPPY_OPENSOURCE_SNAPPY_TEST_H_
 #define UTIL_SNAPPY_OPENSOURCE_SNAPPY_TEST_H_
 
+#ifndef SNAPPY_STATIC
+#ifdef SNAPPY_EXPORTS
+#define SNAPPY_API __declspec(dllexport)
+#else
+#define SNAPPY_API __declspec(dllimport)
+#endif
+#else
+#define SNAPPY_API
+#endif
+
 #include <iostream>
 #include <string>
 
@@ -51,10 +61,8 @@
 #include <sys/time.h>
 #endif
 
-#ifdef HAVE_WINDOWS_H
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
-#endif
 
 #include <string>
 
@@ -584,5 +592,7 @@ class LogMessageVoidify {
 using snappy::CompressFile;
 using snappy::UncompressFile;
 using snappy::MeasureFile;
+
+extern "C" SNAPPY_API int snappy_unittests(int argc, char** argv);
 
 #endif  // UTIL_SNAPPY_OPENSOURCE_SNAPPY_TEST_H_

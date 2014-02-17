@@ -8,3 +8,5 @@ Release
 *.aps
 *.user
 *.nupkg
+syntax: regexp
+packages/.*[0-9].*

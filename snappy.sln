@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "snappy", "snappy.vcxproj", "{6819C17D-58DF-4F01-8E5B-86A6D5A1B29C}"
 EndProject
@@ -9,6 +9,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "runtests", "runtests\runtes
 	ProjectSection(ProjectDependencies) = postProject
 		{6819C17D-58DF-4F01-8E5B-86A6D5A1B29C} = {6819C17D-58DF-4F01-8E5B-86A6D5A1B29C}
 	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "packagetest", "packagetest\packagetest.vcxproj", "{74DFDA5C-4C7F-4C02-8837-A17FE83F4B5F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "singlefiletest", "singlefiletest\singlefiletest.vcxproj", "{07195EFB-21CB-4479-B126-115E05A59EC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +38,20 @@ Global
 		{8A974365-D446-4B4C-A8AE-1978356970A9}.Release|Win32.Build.0 = Release|Win32
 		{8A974365-D446-4B4C-A8AE-1978356970A9}.Release|x64.ActiveCfg = Release|x64
 		{8A974365-D446-4B4C-A8AE-1978356970A9}.Release|x64.Build.0 = Release|x64
+		{74DFDA5C-4C7F-4C02-8837-A17FE83F4B5F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{74DFDA5C-4C7F-4C02-8837-A17FE83F4B5F}.Debug|Win32.Build.0 = Debug|Win32
+		{74DFDA5C-4C7F-4C02-8837-A17FE83F4B5F}.Debug|x64.ActiveCfg = Debug|Win32
+		{74DFDA5C-4C7F-4C02-8837-A17FE83F4B5F}.Release|Win32.ActiveCfg = Release|Win32
+		{74DFDA5C-4C7F-4C02-8837-A17FE83F4B5F}.Release|Win32.Build.0 = Release|Win32
+		{74DFDA5C-4C7F-4C02-8837-A17FE83F4B5F}.Release|x64.ActiveCfg = Release|x64
+		{74DFDA5C-4C7F-4C02-8837-A17FE83F4B5F}.Release|x64.Build.0 = Release|x64
+		{07195EFB-21CB-4479-B126-115E05A59EC3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{07195EFB-21CB-4479-B126-115E05A59EC3}.Debug|Win32.Build.0 = Debug|Win32
+		{07195EFB-21CB-4479-B126-115E05A59EC3}.Debug|x64.ActiveCfg = Debug|Win32
+		{07195EFB-21CB-4479-B126-115E05A59EC3}.Release|Win32.ActiveCfg = Release|Win32
+		{07195EFB-21CB-4479-B126-115E05A59EC3}.Release|Win32.Build.0 = Release|Win32
+		{07195EFB-21CB-4479-B126-115E05A59EC3}.Release|x64.ActiveCfg = Release|x64
+		{07195EFB-21CB-4479-B126-115E05A59EC3}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
