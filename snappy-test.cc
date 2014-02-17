@@ -28,8 +28,6 @@
 //
 // Various stubs for the unit tests for the open-source version of Snappy.
 
-#include "stdafx.h"
-
 #include "snappy-test.h"
 
 #ifdef HAVE_WINDOWS_H

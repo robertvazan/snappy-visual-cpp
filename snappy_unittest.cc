@@ -26,8 +26,6 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#include "stdafx.h"
-
 #include <math.h>
 #include <stdlib.h>
 
@@ -1350,7 +1348,7 @@ BENCHMARK(BM_ZFlat)->DenseRange(0, ARRAYSIZE(files) - 1);
 
 }  // namespace snappy
 
-extern "C" SNAPPY_EXPORTS int snappy_unittests(int argc, char** argv) {
+extern "C" SNAPPY_API int snappy_unittests(int argc, char** argv) {
   InitGoogle(argv[0], &argc, &argv, true);
   File::Init();
   RunSpecifiedBenchmarks();

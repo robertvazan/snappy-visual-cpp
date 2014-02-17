@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Snappy</id>
+    <title>Snappy compression codec for C++</title>
+    <version>1.1.1</version>
+    <authors>Robert Važan</authors>
+    <owners>Robert Važan</owners>
+    <licenseUrl>http://snappy.angeloflogic.com/license/</licenseUrl>
+    <projectUrl>http://snappy.angeloflogic.com/</projectUrl>
+    <iconUrl>http://snappy.angeloflogic.com/images/nuget-icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+        Snappy is a compression algorithm reaching over 250MB/s compression and 500MB/s decompression speeds
+        while still providing interesting compression ratio.
+        This is a source code package that compiles Snappy into your project.
+    </description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright (c) 2005-2014 Google Inc., Robert Važan</copyright>
+    <tags>snappy, compression, native</tags>
+  </metadata>
+  <files>
+    <file src="..\snappy.h" target="\lib\native\include\snappy.h" />
+    <file src="..\snappy-c.h" target="\lib\native\include\snappy-c.h" />
+    <file src="..\snappy-internal.h" target="\lib\native\include\snappy-internal.h" />
+    <file src="..\snappy-sinksource.h" target="\lib\native\include\snappy-sinksource.h" />
+    <file src="..\snappy-stubs-internal.h" target="\lib\native\include\snappy-stubs-internal.h" />
+    <file src="..\snappy-stubs-public.h" target="\lib\native\include\snappy-stubs-public.h" />
+    <file src="..\snappy-test.h" target="\lib\native\include\snappy-test.h" />
+    <file src="..\snappy.cc" target="\lib\native\src\snappy.cc" />
+    <file src="..\snappy-sinksource.cc" target="\lib\native\src\snappy-sinksource.cc" />
+    <file src="..\snappy-stubs-internal.cc" target="\lib\native\src\snappy-stubs-internal.cc" />
+    <file src="..\snappy-c.cc" target="\lib\native\src\snappy-c.cc" />
+    <file src="..\snappy-test.cc" target="\lib\native\src\snappy-test.cc" />
+    <file src="..\snappy_unittest.cc" target="\lib\native\src\snappy_unittest.cc" />
+    <file src="Snappy.props" target="\build\native\Snappy.props" />
+  </files>
+</package>
