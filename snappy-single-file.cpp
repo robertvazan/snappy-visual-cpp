@@ -1,4 +1,6 @@
+#ifndef _CRT_SECURE_NO_WARNINGS
 #define _CRT_SECURE_NO_WARNINGS
+#endif
 
 #pragma warning(disable: 4244 4018 4309 4005 4722 4715 4267)
 
