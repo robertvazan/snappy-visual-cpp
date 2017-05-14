@@ -6,9 +6,9 @@
     <version>1.1.1.7</version>
     <authors>Robert Važan</authors>
     <owners>Robert Važan</owners>
-    <licenseUrl>http://snappy.angeloflogic.com/license/</licenseUrl>
-    <projectUrl>http://snappy.angeloflogic.com/</projectUrl>
-    <iconUrl>http://snappy.angeloflogic.com/images/nuget-icon.png</iconUrl>
+    <licenseUrl>https://snappy.machinezoo.com/license/</licenseUrl>
+    <projectUrl>https://snappy.machinezoo.com/</projectUrl>
+    <iconUrl>https://snappy.machinezoo.com/images/nuget-icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Snappy is a compression algorithm reaching over 250MB/s compression and 500MB/s decompression speeds while still providing interesting compression ratio. This is a source code package that compiles Snappy into your project.</description>
     <releaseNotes>Fixed a warning.</releaseNotes>
