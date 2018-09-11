@@ -12,12 +12,8 @@ This is a Windows port of [Snappy compression algorithm](https://google.github.i
 
 ```cpp
 char compressed[1000];
-size_t compressedLength = 1000;
+size_t length = 1000;
 snappy_status status = snappy_compress(
-    "Hello World!", 12, compressed, &compressedLength);
-char uncompressed[1000];
-size_t uncompressedLength = 1000;
-snappy_status status = snappy_uncompress(
-    compressed, compressedLength, uncompressed, &uncompressedLength);
+    "Hello World!", 12, compressed, &length);
 ```
 
