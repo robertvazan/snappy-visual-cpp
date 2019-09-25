@@ -1,4 +1,3 @@
-syntax: glob
 ipch
 *.suo
 *.sdf
@@ -8,5 +7,4 @@ Release
 *.aps
 *.user
 *.nupkg
-syntax: regexp
-packages/.*[0-9].*
+
