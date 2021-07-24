@@ -1,5 +1,7 @@
 # Snappy for Visual C++ #
 
+**UNMAINTAINED**: This library is no longer maintained, because I rarely use Windows or C++ these days. It has not been updated in years. You are welcome to adopt the library if you find it useful.
+
 This is a Windows port of [Snappy compression algorithm](https://google.github.io/snappy/).
 
 * Documentation: [Home](https://snappy.machinezoo.com/), [Tutorial for C++](https://snappy.machinezoo.com/#cpp)
